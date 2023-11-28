@@ -13,9 +13,10 @@ sap.ui.define([
 
             },
 
-            onspanish: function(){
-                var iModel = this.getOwnerComponent().getModel("i18n_es");
-                this.getOwnerComponent().setModel(iModel, "i18n");
+            onspanish: function () {
+                
+                var imodel = this.getOwnerComponent().getModel("i18n_es");
+                this.getOwnerComponent().setModel(imodel, "i18n");
             },
             
             //creating dialog

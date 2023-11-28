@@ -5,14 +5,57 @@
     xmlns="sap.m" 
     xmlns:core="sap.ui.core">
     <App id="app">
-    <Page id="page" title="{i18n>appTitle}">
-    <headerContent>
-    <Button id="demoBtn" text="Spanish" press="onspanish"/>
-    </headerContent>
+       <Page id="page" title="{i18n>appTitle}">
+       <headerContent>
+           <Button id="demoBtn" text="Spanish" press="onspanish"/>
+       </headerContent>
         <content>
-         <core:Fragment id="bankDetailsFragment" fragmentName="com.sap.bankapp.view.fragments.BankDetails" type="XML"/>
-         <Button id="openBankDetails" type="Neutral" text="{i18n>FindMoreBtn}" class="sapUiSmallMarginBegin" press=".onOpenBankDetails"/>   
-        </content>
-    </Page>
+        <!-- Bank Details Fragment -->
+            <core:Fragment id="bankDetailsFragment" fragmentName="com.sap.bankapp.view.fragments.BankDetails" type="XML"/>
+         	<Panel id="pCards" expandable="true" headerText="Card Details" 
+            width="auto" 
+            class="sapUiResponsiveMargin">
+		<content>
+			<List
+		id="myList"
+		items="" width="50%">
+		<items>
+			<StandardListItem id="card1"
+				title="Master Card 8204637291047"
+				description="Debit Card assigned on 4 Aug 2017"
+				icon="sap-icon://credit-card"
+				iconInset="false"
+				highlight="Success"
+				info="Active"
+				infoState="Success"
+				infoStateInverted="true" />
+
+<StandardListItem id="card2"
+				title=" Master Card 35890540247839"
+				description="Credit Card assigned on 28 Feb 2016"
+				icon="sap-icon://credit-card"
+				iconInset="false"
+				highlight="Error"
+				info="Expired"
+				infoState="Error"
+				infoStateInverted="true" />
+
+<StandardListItem id="card3"
+				title="Master Card 459023809527"
+				description="Debit Card assigned on 4 Aug 2017"
+				icon="sap-icon://credit-card"
+				iconInset="false"
+				highlight="Success"
+				info="Active"
+				infoState="Success"
+				infoStateInverted="true" />
+
+
+		</items>
+	</List>	
+		</content>
+	</Panel>
+        </content>    
+        </Page>
     </App>
 </mvc:View>
