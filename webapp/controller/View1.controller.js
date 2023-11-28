@@ -1,5 +1,6 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/Fragment"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
@@ -11,6 +12,12 @@ sap.ui.define([
             onInit: function () {
 
             },
+
+            onspanish: function(){
+                var iModel = this.getOwnerComponent().getModel("i18n_es");
+                this.getOwnerComponent().setModel(iModel, "i18n");
+            },
+            
             //creating dialog
             onOpenBankDetails: function () {
                 if (!this.moreBankDetails) {

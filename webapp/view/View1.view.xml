@@ -5,9 +5,9 @@
     xmlns="sap.m" 
     xmlns:core="sap.ui.core">
     <App id="app">
-    <Page id="page" title="Account Details">
+    <Page id="page" title="{i18n>appTitle}">
     <headerContent>
-    <Button id="demoBtn" type="Emphasized" text="{i18n>home}"/>
+    <Button id="demoBtn" text="Spanish" press="onspanish"/>
     </headerContent>
         <content>
          <core:Fragment id="bankDetailsFragment" fragmentName="com.sap.bankapp.view.fragments.BankDetails" type="XML"/>

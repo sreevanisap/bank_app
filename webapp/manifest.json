@@ -59,6 +59,12 @@
         }
       }
     },
+    "i18n_es": {
+      "type": "sap.ui.model.resource.ResourceModel",
+      "settings": {
+        "bundleName": "com.sap.bankapp.i18n.i18n_es"
+      }
+    },
     "resources": {
       "css": [
         {
